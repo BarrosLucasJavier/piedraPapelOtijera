@@ -1,0 +1,42 @@
+.scoreContainer{
+    height: 100px;
+    display: flex;
+    padding: 0.8rem;
+    border: 2px solid hsl(217, 16%, 45%) ;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 100%;
+}
+.scoreContainer img{
+    max-width: 55%;
+}
+.imgContainer{
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.scorePoints{
+    min-width: 75px;
+    min-height: 100%;
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.scorePoints span{
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: hsl(229, 25%, 31%);
+}
+.scorePoints p{
+    color: hsl(229, 64%, 46%);
+    letter-spacing: 1px;
+    font-size: 0.6rem;
+    line-height: 0.1px;
+}
