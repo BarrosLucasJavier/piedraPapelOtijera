@@ -5,3 +5,17 @@
     align-items: center;
     min-height: 100vh;
 }
+.homeContainer button{
+    padding: 0.5rem 0.5rem;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    border-radius: 8px;
+    letter-spacing: 1.5px;
+    min-width: 110px;
+    font-size: 0.9rem;
+}
+.homeContainer button:hover{
+    box-shadow: 0 0 15px white;
+    cursor: pointer;
+}

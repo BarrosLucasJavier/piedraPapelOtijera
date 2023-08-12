@@ -1,0 +1,53 @@
+.selectionContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imagesContainer{
+    width: 70vw;
+    max-width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.triangle{
+    width: 100%;
+}
+
+.rock img, .paper img, .scissors img{
+    width: 60%;
+}
+.imgContainer{
+    width: 120px;
+    height: 120px;
+    background-color: white;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 0.3rem;
+}
+.paper{
+    top: -60px;
+    left: -30px;
+    border: 15px solid hsl(230, 89%, 65%);
+    box-shadow: 0 5px 0px hsl(230, 89%, 62%);
+}
+.scissors{
+    top: -60px;
+    right: -30px;
+    border: 15px solid hsl(40, 84%, 53%);
+    box-shadow: 0 5px 0px hsl(39, 89%, 49%) ;
+}
+.rock{
+    bottom: 0px;
+    left: calc(50% - 60px);
+    border: 15px solid hsl(349, 70%, 56%);
+    box-shadow: 0 5px 0px hsl(349, 71%, 52%);
+}
+.rock:hover, .scissors:hover, .paper:hover{
+    box-shadow: 0 0 35px white;
+    cursor: pointer;
+}
