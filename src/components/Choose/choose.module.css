@@ -4,3 +4,37 @@
     align-items: center;
     width: 100%;
 }
+.imagesContainer img{
+    width: 60%;
+}
+.imagesContainer{
+    width: 120px;
+    height: 120px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 0.3rem;
+}
+.selectionContainer{
+    display: flex;
+    flex-direction: column ;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    color: white;
+    letter-spacing: 1.5px;
+}
+.paper{
+    border: 15px solid hsl(230, 89%, 65%);
+    box-shadow: 0 5px 0px hsl(230, 89%, 62%);
+}
+.scissors{
+    border: 15px solid hsl(40, 84%, 53%);
+    box-shadow: 0 5px 0px hsl(39, 89%, 49%) ;
+}
+.rock{
+    border: 15px solid hsl(349, 70%, 56%);
+    box-shadow: 0 5px 0px hsl(349, 71%, 52%);
+}

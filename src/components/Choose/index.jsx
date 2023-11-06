@@ -6,26 +6,71 @@ const Choose = () => {
 
     const { option } = useGame()
     const [houseOption, setHouseOption] = useState("");
-    
+    const [result, setResult] = useState("");
 
     useEffect(() => {
-        houseSelection();
+        setHouseOption(houseSelection());
+        setResult(loseOrWin())
     }, []);
-    
-    const houseSelection = () =>{
+
+    const loseOrWin = () => {
+
+        switch (option) {
+            case "rock":
+                if (houseOption === "rock") {
+                    return "tie"
+                } else if (houseOption === "paper") {
+                    return "lose"
+                } else {
+                    return "win"
+                }
+            case "paper":
+                if (houseOption === "paper") {
+                    return "tie"
+                } else if (houseOption === "scissors") {
+                    return "lose"
+                } else {
+                    return "win"
+                }
+            case "scissors":
+                if (houseOption === "scissors") {
+                    return "tie"
+                } else if (houseOption === "rock") {
+                    return "lose"
+                } else {
+                    return "win"
+                }
+            default:
+                break;
+        }
+    }
+
+    const houseSelection = () => {
         const selected = +Math.floor(Math.random() * 3);
-        setHouseOption(images[Object.keys(images)[selected]]);
+        switch (selected) {
+            case 0:
+                return "rock";
+            case 1:
+                return "paper";
+            case 2:
+                return "scissors";          
+        }
     }
     return (
         <section className={styles.chooseContainer}>
-            <div>
-                <img src={images["rock"]} alt={option}/>
+            <div className={styles.selectionContainer}>
+                <div className={`${styles.imagesContainer} ${styles[option]}`}>
+                    <img src={images[option]} alt={option} />
+                </div>
                 <p>YOU PICKED</p>
             </div>
-            <div>
-                <img src={houseOption}/>
+            <div className={styles.selectionContainer}>
+                <div className={`${styles.imagesContainer} ${styles[houseOption]}`}>
+                    <img src={images[houseOption]} />
+                </div>
                 <p>THE HOUSE PICKED</p>
             </div>
+            <h2>{result}</h2>
         </section>
     );
 }

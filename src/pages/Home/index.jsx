@@ -1,4 +1,3 @@
-import Choose from '../../components/Choose';
 import Score from '../../components/Score';
 import Selection from '../../components/Selection';
 import styles from './home.module.css'
@@ -8,8 +7,7 @@ const Home = () => {
     return (
         <main className={styles.homeContainer}>
             <Score/>
-            {/* <Selection/> */}
-            <Choose/>
+            <Selection/>
             <button>RULES</button>
         </main>
     );

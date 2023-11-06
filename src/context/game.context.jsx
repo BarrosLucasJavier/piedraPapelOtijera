@@ -7,7 +7,7 @@ export const GameContext = createContext();
 
 export const GameProvider = ({children}) =>{
 
-    const [option, setOption] = useState("");
+    const [option, setOption] = useState("rock");
 
     const gameValues = {
         option,
