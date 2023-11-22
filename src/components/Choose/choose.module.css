@@ -3,6 +3,7 @@
     justify-content: space-around;
     align-items: center;
     width: 100%;
+    flex-wrap: wrap;
 }
 .imagesContainer img{
     width: 60%;
@@ -23,8 +24,9 @@
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
-    color: white;
+    color: rgb(255, 255, 255);
     letter-spacing: 1.5px;
+    transition: all 1s ease-out;
 }
 .paper{
     border: 15px solid hsl(230, 89%, 65%);
@@ -37,4 +39,53 @@
 .rock{
     border: 15px solid hsl(349, 70%, 56%);
     box-shadow: 0 5px 0px hsl(349, 71%, 52%);
+}
+.neutral{
+    background-color:hsl(0, 0%, 46%) ;
+    border: 15px solid hsl(0, 0%, 46%);
+    box-shadow: 0 5px 0px hsl(0, 0%, 36%);
+}
+.resultContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    color: white;
+    font-size: 2.3rem;
+    width: 70%;
+    order: 2;
+    margin-top: 6rem;
+    text-align: justify;
+}
+.resultContainer .resultButton{
+    background-color: white;
+    color: rgb(20,21,57);
+    width: 100%;
+    padding: 1rem 0;
+    font-size: 1.2rem;
+}
+.light::before {
+    content: "";
+    width: 13rem;
+    height: 13rem;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.05);
+    position: absolute;
+    z-index: -1;
+    
+}
+.light::after {
+    content: "";
+    width: 16rem;
+    height: 16rem;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.025);
+    position: absolute;
+    z-index: -1;
+    
+}
+.light{
+    outline: 18px solid rgba(255, 255, 255, 0.1);
+    
 }
